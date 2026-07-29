@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Photo from "@/components/Photo";
+import PhotoMosaic from "@/components/PhotoMosaic";
 import ProgramCard from "@/components/ProgramCard";
 import { ButtonSolid, ButtonOutline, DonateBand } from "@/components/CTA";
 import { site } from "@/content/site";
@@ -125,6 +126,25 @@ export default function HomePage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ============ COMMUNITY MOSAIC ============ */}
+      <section className="border-t border-line bg-mist">
+        <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
+          <div className="mb-10 text-center">
+            <p className="eyebrow">One team. One dream.</p>
+            <h2 className="display mt-3 text-3xl md:text-5xl">The community in motion</h2>
+          </div>
+          <PhotoMosaic
+            images={[
+              { src: "", alt: "Big group photo — the whole HADE community" },
+              { src: "", alt: "Youth basketball game moment" },
+              { src: "", alt: "Volunteers at the supply drive" },
+              { src: "", alt: "Students on the college tour" },
+              { src: "", alt: "Friends Giving table" },
+            ]}
+          />
         </div>
       </section>
 

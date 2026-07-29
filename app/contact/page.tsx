@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import Photo from "@/components/Photo";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -50,6 +51,13 @@ export default function ContactPage() {
             <p className="eyebrow">Based in</p>
             <p className="display mt-2 text-2xl md:text-3xl">{site.city}</p>
           </div>
+
+          <Photo
+            src=""
+            alt="The HADE team at a community event"
+            className="aspect-[16/9]"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
 
         <div className="border border-line p-7 md:p-9">

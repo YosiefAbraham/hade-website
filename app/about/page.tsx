@@ -4,6 +4,7 @@ import Photo from "@/components/Photo";
 import { DonateBand } from "@/components/CTA";
 import { site } from "@/content/site";
 import { team } from "@/content/team";
+import { milestones } from "@/content/history";
 
 export const metadata: Metadata = {
   title: "About",
@@ -54,6 +55,43 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ============ HISTORY TIMELINE ============ */}
+      <section className="bg-ink text-paper">
+        <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-paper/60">
+            How we got here
+          </p>
+          <h2 className="display mt-3 text-3xl md:text-5xl">The road so far</h2>
+          <ol className="mt-12 flex flex-col gap-0">
+            {milestones.map((m, i) => (
+              <li
+                key={m.year}
+                className={`grid gap-6 border-t border-paper/15 py-10 md:grid-cols-[8rem_1fr_18rem] md:gap-10 ${
+                  i === milestones.length - 1 ? "border-b" : ""
+                }`}
+              >
+                <div className="display text-4xl text-paper/40 md:text-5xl">
+                  {m.year}
+                </div>
+                <div>
+                  <h3 className="display text-2xl">{m.title}</h3>
+                  <p className="mt-3 max-w-[55ch] leading-relaxed text-paper/80">
+                    {m.text}
+                  </p>
+                </div>
+                <Photo
+                  src={m.image.src}
+                  alt={m.image.alt}
+                  className="aspect-[16/10] md:aspect-[4/3]"
+                  sizes="(max-width: 768px) 100vw, 18rem"
+                />
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+      <div className="tape" aria-hidden="true" />
+
       {/* ============ IMPACT ============ */}
       <section className="border-y border-line bg-mist">
         <div className="mx-auto max-w-6xl px-5 py-16 md:py-20">
@@ -78,6 +116,14 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+
+      {/* ============ FULL-WIDTH GROUP PHOTO ============ */}
+      <Photo
+        src=""
+        alt="Everyone together — full HADE group photo"
+        className="aspect-[21/9] w-full"
+        sizes="100vw"
+      />
 
       {/* ============ TEAM ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-24">

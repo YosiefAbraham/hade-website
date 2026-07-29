@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
+import Photo from "@/components/Photo";
 import { site } from "@/content/site";
 import { programs } from "@/content/programs";
 
@@ -20,8 +21,18 @@ export default function DonatePage() {
 
       {/* ============ WAYS TO GIVE ============ */}
       <section className="mx-auto max-w-6xl px-5 py-16 md:py-20">
-        <p className="eyebrow">Ways to give</p>
-        <h2 className="display mt-3 text-3xl md:text-4xl">Pick what works for you</h2>
+        <div className="grid items-end gap-8 md:grid-cols-[1fr_20rem]">
+          <div>
+            <p className="eyebrow">Ways to give</p>
+            <h2 className="display mt-3 text-3xl md:text-4xl">Pick what works for you</h2>
+          </div>
+          <Photo
+            src=""
+            alt="What donations become — backpacks, meals, bus seats"
+            className="hidden aspect-[16/9] md:block"
+            sizes="20rem"
+          />
+        </div>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {site.donationMethods.map((m) => (
             <a

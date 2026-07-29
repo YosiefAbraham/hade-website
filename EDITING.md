@@ -20,6 +20,7 @@ Open the `content/` folder. There are five files, each plain text:
 - **`events.ts`** — the Past Events gallery (newest at the top)
 - **`team.ts`** — board members shown on the About page
 - **`apply.ts`** — the applications on the Apply page
+- **`history.ts`** — the year-by-year timeline on the About page
 
 Edit only the words **between quotation marks**. Example:
 
