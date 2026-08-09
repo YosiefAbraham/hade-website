@@ -47,9 +47,11 @@ Rules of thumb:
 image: { src: "/images/events/bbq-2025.jpg", alt: "Back to school barbecue 2025" },
 ```
 
-Where you see `src: ""` today, the site shows a striped placeholder labeled
-with what photo belongs there — walk the site to see exactly which photos
-are needed.
+Where you see `src: ""` today, the site shows a striped placeholder with a big
+number in the middle of it — walk the site to see exactly which photos are
+needed. Each number is permanent, so you can note "I have a photo for 27" and
+find slot 27 in **PLACEHOLDERS.md**, which lists all of them with the file to
+edit. Only the `src` needs to change; leave `slot` and `alt` as they are.
 
 Photo tips:
 - Use `.jpg` files under ~500 KB when you can (export from your phone is fine —

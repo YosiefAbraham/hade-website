@@ -22,9 +22,9 @@ export default function ApplyPage() {
       <section className="mx-auto max-w-4xl px-5 py-16 md:py-24">
         {/* Three-photo strip: what joining actually looks like */}
         <div className="mb-12 grid grid-cols-3 gap-3">
-          <Photo src="" alt="A student on the college tour" className="aspect-[3/4]" sizes="33vw" />
-          <Photo src="" alt="Basketball season in action" className="mt-6 aspect-[3/4]" sizes="33vw" />
-          <Photo src="" alt="Volunteers on event day" className="aspect-[3/4]" sizes="33vw" />
+          <Photo src="" alt="A student on the college tour" slot={12} className="aspect-[3/4]" sizes="33vw" />
+          <Photo src="" alt="Basketball season in action" slot={13} className="mt-6 aspect-[3/4]" sizes="33vw" />
+          <Photo src="" alt="Volunteers on event day" slot={14} className="aspect-[3/4]" sizes="33vw" />
         </div>
         <div className="flex flex-col gap-6">
           {applications.map((a) => (

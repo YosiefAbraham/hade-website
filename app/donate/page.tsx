@@ -29,6 +29,7 @@ export default function DonatePage() {
           <Photo
             src=""
             alt="What donations become — backpacks, meals, bus seats"
+            slot={16}
             className="hidden aspect-[16/9] md:block"
             sizes="20rem"
           />

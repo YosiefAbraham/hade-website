@@ -50,8 +50,8 @@ export default function AboutPage() {
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          <Photo src="" alt="The HADE founding group" className="aspect-[4/3]" />
-          <Photo src="" alt="An early HADE community event" className="aspect-[16/9]" />
+          <Photo src="" alt="The HADE founding group" slot={9} className="aspect-[4/3]" />
+          <Photo src="" alt="An early HADE community event" slot={10} className="aspect-[16/9]" />
         </div>
       </section>
 
@@ -82,6 +82,7 @@ export default function AboutPage() {
                 <Photo
                   src={m.image.src}
                   alt={m.image.alt}
+                  slot={m.image.slot}
                   className="aspect-[16/10] md:aspect-[4/3]"
                   sizes="(max-width: 768px) 100vw, 18rem"
                 />
@@ -121,6 +122,7 @@ export default function AboutPage() {
       <Photo
         src=""
         alt="Everyone together — full HADE group photo"
+        slot={11}
         className="aspect-[21/9] w-full"
         sizes="100vw"
       />
@@ -136,7 +138,7 @@ export default function AboutPage() {
         <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
           {team.map((m) => (
             <div key={m.name}>
-              <Photo src={m.image.src} alt={m.image.alt} className="aspect-square" sizes="20vw" />
+              <Photo src={m.image.src} alt={m.image.alt} slot={m.image.slot} className="aspect-square" sizes="20vw" />
               <h3 className="mt-3 font-bold leading-snug">{m.name}</h3>
               <p className="text-xs font-semibold uppercase tracking-widest text-muted">
                 {m.role}

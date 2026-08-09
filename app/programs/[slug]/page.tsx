@@ -56,6 +56,7 @@ export default async function ProgramPage({ params }: Props) {
             <Photo
               src={mainImage.src}
               alt={mainImage.alt}
+              slot={mainImage.slot}
               className="aspect-[16/9]"
               sizes="(max-width: 768px) 100vw, 60vw"
               priority
@@ -71,9 +72,10 @@ export default async function ProgramPage({ params }: Props) {
             <div className="mt-8 grid grid-cols-2 gap-3">
               {moreImages.map((img) => (
                 <Photo
-                  key={img.alt}
+                  key={img.slot}
                   src={img.src}
                   alt={img.alt}
+                  slot={img.slot}
                   className="aspect-[4/3]"
                   sizes="30vw"
                 />

@@ -12,7 +12,8 @@ export type PastEvent = {
   program: string; // which program it belongs to (shown as a tag)
   date: string; // e.g. "August 2025"
   blurb: string; // one or two sentences about how it went
-  image: { src: string; alt: string };
+  // src "" = placeholder; `slot` is the number printed on that placeholder
+  image: { slot: number; src: string; alt: string };
 };
 
 export const pastEvents: PastEvent[] = [
@@ -22,7 +23,7 @@ export const pastEvents: PastEvent[] = [
     date: "August 2025",
     blurb:
       "Backpacks and full supply kits handed out to neighborhood kids ahead of the first day of school, with the grills going all afternoon.",
-    image: { src: "", alt: "Back to school barbecue 2025" },
+    image: { slot: 27, src: "", alt: "Back to school barbecue 2025" },
   },
   {
     title: "College Tour",
@@ -30,7 +31,7 @@ export const pastEvents: PastEvent[] = [
     date: "Spring 2025",
     blurb:
       "A busload of San Diego students visited university campuses — for many, their first time on a college quad.",
-    image: { src: "", alt: "Students on the 2025 college tour" },
+    image: { slot: 28, src: "", alt: "Students on the 2025 college tour" },
   },
   {
     title: "Friends Giving",
@@ -38,7 +39,7 @@ export const pastEvents: PastEvent[] = [
     date: "November 2024",
     blurb:
       "One long table, one shared meal. Families, elders, and students spent the holiday together.",
-    image: { src: "", alt: "Friends Giving 2024 dinner" },
+    image: { slot: 29, src: "", alt: "Friends Giving 2024 dinner" },
   },
   {
     title: "Feed the Homeless Drive",
@@ -46,7 +47,7 @@ export const pastEvents: PastEvent[] = [
     date: "Winter 2024",
     blurb:
       "Volunteer crews cooked, packed, and hand-delivered hot meals to unhoused neighbors across San Diego.",
-    image: { src: "", alt: "Meal delivery volunteers, winter 2024" },
+    image: { slot: 30, src: "", alt: "Meal delivery volunteers, winter 2024" },
   },
   {
     title: "Youth Basketball Season",
@@ -54,7 +55,7 @@ export const pastEvents: PastEvent[] = [
     date: "2024–2025 season",
     blurb:
       "A full season of games, practices, and team dinners — jerseys and gym time covered by the foundation.",
-    image: { src: "", alt: "Youth basketball season highlights" },
+    image: { slot: 31, src: "", alt: "Youth basketball season highlights" },
   },
   {
     title: "College Prep Workshop Night",
@@ -62,6 +63,6 @@ export const pastEvents: PastEvent[] = [
     date: "Fall 2024",
     blurb:
       "Students and parents worked through applications and FAFSA forms side-by-side with volunteer mentors.",
-    image: { src: "", alt: "College prep workshop night" },
+    image: { slot: 32, src: "", alt: "College prep workshop night" },
   },
 ];

@@ -32,6 +32,7 @@ export default function HomePage() {
           <Photo
             src=""
             alt="HADE community — youth and volunteers together"
+            slot={1}
             className="aspect-[4/3] md:aspect-[4/5]"
             sizes="(max-width: 768px) 100vw, 50vw"
             priority
@@ -72,8 +73,8 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <Photo src="" alt="Youth at a HADE event" className="aspect-[3/4]" sizes="25vw" />
-          <Photo src="" alt="Volunteers at work" className="mt-8 aspect-[3/4]" sizes="25vw" />
+          <Photo src="" alt="Youth at a HADE event" slot={2} className="aspect-[3/4]" sizes="25vw" />
+          <Photo src="" alt="Volunteers at work" slot={3} className="mt-8 aspect-[3/4]" sizes="25vw" />
         </div>
       </section>
 
@@ -117,7 +118,7 @@ export default function HomePage() {
         <div className="grid gap-5 sm:grid-cols-3">
           {pastEvents.slice(0, 3).map((e) => (
             <div key={e.title + e.date}>
-              <Photo src={e.image.src} alt={e.image.alt} className="aspect-[4/3]" sizes="33vw" />
+              <Photo src={e.image.src} alt={e.image.alt} slot={e.image.slot} className="aspect-[4/3]" sizes="33vw" />
               <div className="mt-3 flex items-baseline justify-between gap-3">
                 <h3 className="font-bold">{e.title}</h3>
                 <span className="shrink-0 text-xs uppercase tracking-widest text-muted">
@@ -138,11 +139,11 @@ export default function HomePage() {
           </div>
           <PhotoMosaic
             images={[
-              { src: "", alt: "Big group photo — the whole HADE community" },
-              { src: "", alt: "Youth basketball game moment" },
-              { src: "", alt: "Volunteers at the supply drive" },
-              { src: "", alt: "Students on the college tour" },
-              { src: "", alt: "Friends Giving table" },
+              { slot: 4, src: "", alt: "Big group photo — the whole HADE community" },
+              { slot: 5, src: "", alt: "Youth basketball game moment" },
+              { slot: 6, src: "", alt: "Volunteers at the supply drive" },
+              { slot: 7, src: "", alt: "Students on the college tour" },
+              { slot: 8, src: "", alt: "Friends Giving table" },
             ]}
           />
         </div>

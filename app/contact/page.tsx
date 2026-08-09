@@ -55,6 +55,7 @@ export default function ContactPage() {
           <Photo
             src=""
             alt="The HADE team at a community event"
+            slot={15}
             className="aspect-[16/9]"
             sizes="(max-width: 768px) 100vw, 50vw"
           />

@@ -3,10 +3,12 @@
    To edit a program: change the text between quotes.
    To add a photo: put the file in public/images/programs/
    and write its path like "/images/programs/my-photo.jpg".
-   Leave image src as "" to show a neat placeholder instead.
+   Leave image src as "" to show a neat placeholder instead — the number
+   printed on that placeholder is its `slot` (see PLACEHOLDERS.md).
    ============================================================ */
 
 export type ProgramImage = {
+  slot: number; // the number printed on this photo's placeholder
   src: string; // "" = show placeholder; otherwise "/images/programs/file.jpg"
   alt: string; // short description of the photo (used for accessibility)
 };
@@ -42,9 +44,9 @@ export const programs: Program[] = [
     fundraising:
       "Donations cover the charter bus, hotel rooms, meals, and campus visit fees. Every dollar raised goes directly to getting students on campus.",
     images: [
-      { src: "", alt: "Students on a university campus during the tour" },
-      { src: "", alt: "Group photo in front of a college entrance" },
-      { src: "", alt: "Students in a campus lecture hall" },
+      { slot: 33, src: "", alt: "Students on a university campus during the tour" },
+      { slot: 34, src: "", alt: "Group photo in front of a college entrance" },
+      { slot: 35, src: "", alt: "Students in a campus lecture hall" },
     ],
   },
   {
@@ -66,8 +68,8 @@ export const programs: Program[] = [
     fundraising:
       "Donations fund workshop materials, application fee support, and space rentals for prep nights.",
     images: [
-      { src: "", alt: "A mentor helping a student with an application" },
-      { src: "", alt: "Students at a college prep workshop" },
+      { slot: 36, src: "", alt: "A mentor helping a student with an application" },
+      { slot: 37, src: "", alt: "Students at a college prep workshop" },
     ],
   },
   {
@@ -88,9 +90,9 @@ export const programs: Program[] = [
     fundraising:
       "Donations buy the backpacks, school supplies, food, and equipment. A single backpack full of supplies costs about $25 to put together.",
     images: [
-      { src: "", alt: "Tables of backpacks ready to be given out" },
-      { src: "", alt: "Families at the back to school barbecue" },
-      { src: "", alt: "Volunteers packing school supply kits" },
+      { slot: 38, src: "", alt: "Tables of backpacks ready to be given out" },
+      { slot: 39, src: "", alt: "Families at the back to school barbecue" },
+      { slot: 40, src: "", alt: "Volunteers packing school supply kits" },
     ],
   },
   {
@@ -111,8 +113,8 @@ export const programs: Program[] = [
     fundraising:
       "Donations cover the food, the venue, and to-go meals for families who can't make it in person.",
     images: [
-      { src: "", alt: "The Friends Giving dinner table" },
-      { src: "", alt: "Volunteers serving food at Friends Giving" },
+      { slot: 41, src: "", alt: "The Friends Giving dinner table" },
+      { slot: 42, src: "", alt: "Volunteers serving food at Friends Giving" },
     ],
   },
   {
@@ -133,8 +135,8 @@ export const programs: Program[] = [
     fundraising:
       "Donations buy the groceries and packaging. Every few dollars puts another hot meal in someone's hands.",
     images: [
-      { src: "", alt: "Volunteers preparing meals in the kitchen" },
-      { src: "", alt: "Packed meals ready for delivery" },
+      { slot: 43, src: "", alt: "Volunteers preparing meals in the kitchen" },
+      { slot: 44, src: "", alt: "Packed meals ready for delivery" },
     ],
   },
   {
@@ -155,9 +157,9 @@ export const programs: Program[] = [
     fundraising:
       "Donations pay for gym rentals, jerseys, basketballs, and league fees.",
     images: [
-      { src: "", alt: "The youth basketball team on the court" },
-      { src: "", alt: "A game in progress" },
-      { src: "", alt: "Team huddle with coaches" },
+      { slot: 45, src: "", alt: "The youth basketball team on the court" },
+      { slot: 46, src: "", alt: "A game in progress" },
+      { slot: 47, src: "", alt: "Team huddle with coaches" },
     ],
   },
   {
@@ -178,8 +180,8 @@ export const programs: Program[] = [
     fundraising:
       "Donations keep these events free: food, supplies, permits, and space rentals.",
     images: [
-      { src: "", alt: "A community gathering in the park" },
-      { src: "", alt: "Neighbors at a HADE community event" },
+      { slot: 48, src: "", alt: "A community gathering in the park" },
+      { slot: 49, src: "", alt: "Neighbors at a HADE community event" },
     ],
   },
 ];

@@ -13,6 +13,7 @@ export default function ProgramCard({ program }: { program: Program }) {
       <Photo
         src={program.images[0]?.src ?? ""}
         alt={program.images[0]?.alt ?? program.name}
+        slot={program.images[0]?.slot}
         className="aspect-[16/10]"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />

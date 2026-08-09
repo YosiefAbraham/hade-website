@@ -9,7 +9,8 @@ export type TeamMember = {
   name: string;
   role: string;
   bio: string; // a sentence or two — "" to leave blank
-  image: { src: string; alt: string };
+  // src "" = placeholder; `slot` is the number printed on that placeholder
+  image: { slot: number; src: string; alt: string };
 };
 
 export const team: TeamMember[] = [
@@ -17,30 +18,30 @@ export const team: TeamMember[] = [
     name: "Maezn G. Micael",
     role: "President",
     bio: "",
-    image: { src: "", alt: "Maezn G. Micael, President" },
+    image: { slot: 22, src: "", alt: "Maezn G. Micael, President" },
   },
   {
     name: "Raheal Mengisteab",
     role: "Vice President",
     bio: "",
-    image: { src: "", alt: "Raheal Mengisteab, Vice President" },
+    image: { slot: 23, src: "", alt: "Raheal Mengisteab, Vice President" },
   },
   {
     name: "Samrawit Micael",
     role: "Secretary",
     bio: "",
-    image: { src: "", alt: "Samrawit Micael, Secretary" },
+    image: { slot: 24, src: "", alt: "Samrawit Micael, Secretary" },
   },
   {
     name: "Selamwit Ghebrehiwet",
     role: "Chief Financial Officer",
     bio: "",
-    image: { src: "", alt: "Selamwit Ghebrehiwet, CFO" },
+    image: { slot: 25, src: "", alt: "Selamwit Ghebrehiwet, CFO" },
   },
   {
     name: "Senay Tesfamariam",
     role: "Director",
     bio: "",
-    image: { src: "", alt: "Senay Tesfamariam, Director" },
+    image: { slot: 26, src: "", alt: "Senay Tesfamariam, Director" },
   },
 ];

@@ -26,6 +26,7 @@ export default function EventsPage() {
               <Photo
                 src={e.image.src}
                 alt={e.image.alt}
+                slot={e.image.slot}
                 className="aspect-[4/3]"
                 sizes="(max-width: 640px) 100vw, 33vw"
               />
